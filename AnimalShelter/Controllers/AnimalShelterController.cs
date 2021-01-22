@@ -59,6 +59,13 @@ namespace AnimalShelter.Controllers
             _db.Dogs.Remove(dogToDelete);
             _db.SaveChanges();
         }
+
+        //GET api/values/searchTerm
+        [HttpGet("{searchTerm}")]
+        public ActionResult<Dog> Get(string searchTerm)
+        {
+            return _db.Dogs.FirstOrDefault(entry => entry.Name == searchTerm);
+        }
     }
 
     [Route("api/cats")]
@@ -110,6 +117,13 @@ namespace AnimalShelter.Controllers
             var catToDelete = _db.Cats.FirstOrDefault(entry => entry.CatId == id);
             _db.Cats.Remove(catToDelete);
             _db.SaveChanges();
+        }
+
+        //GET api/values/searchTerm
+        [HttpGet("{searchTerm}")]
+        public ActionResult<Cat> Get(string searchTerm)
+        {
+            return _db.Cats.FirstOrDefault(entry => entry.Name == searchTerm);
         }
     }
 }
