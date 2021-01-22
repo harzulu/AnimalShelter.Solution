@@ -36,6 +36,19 @@ namespace AnimalShelter.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Cats",
+                columns: new[] { "CatId", "Breed", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Short Hair", "Baby Girl" },
+                    { 2, "Short Hair", "Inky" },
+                    { 3, "Siamese", "Marley" },
+                    { 4, "Short Hair", "Michael" },
+                    { 5, "Short Hair", "Paprika" },
+                    { 6, "Long Hair", "Poe" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Dogs",
                 columns: new[] { "DogId", "Breed", "Name" },
                 values: new object[,]

@@ -10,6 +10,7 @@ namespace AnimalShelter.Models
     }
 
     public DbSet<Dog> Dogs { get; set; }
+    public DbSet<Cat> Cats { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -26,7 +27,15 @@ namespace AnimalShelter.Models
                     new Dog { DogId = 9, Name = "Chickie", Breed = "Pit Bull"},
                     new Dog { DogId = 10, Name = "Jasmine", Breed = "German Sheppard"} 
                 );
+            builder.Entity<Cat>()
+                .HasData(
+                    new Cat { CatId = 1, Name = "Baby Girl", Breed = "Short Hair"},
+                    new Cat { CatId = 2, Name = "Inky", Breed = "Short Hair"},
+                    new Cat { CatId = 3, Name = "Marley", Breed = "Siamese"},
+                    new Cat { CatId = 4, Name = "Michael", Breed = "Short Hair"},
+                    new Cat { CatId = 5, Name = "Paprika", Breed = "Short Hair"},
+                    new Cat { CatId = 6, Name = "Poe", Breed = "Long Hair"}
+                );
         }
-    public DbSet<Cat> Cats { get; set; }
   }
 }

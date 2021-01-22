@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelter.Migrations
 {
     [DbContext(typeof(AnimalShelterContext))]
-    [Migration("20210122192451_Initial")]
+    [Migration("20210122212403_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,44 @@ namespace AnimalShelter.Migrations
                     b.HasKey("CatId");
 
                     b.ToTable("Cats");
+
+                    b.HasData(
+                        new
+                        {
+                            CatId = 1,
+                            Breed = "Short Hair",
+                            Name = "Baby Girl"
+                        },
+                        new
+                        {
+                            CatId = 2,
+                            Breed = "Short Hair",
+                            Name = "Inky"
+                        },
+                        new
+                        {
+                            CatId = 3,
+                            Breed = "Siamese",
+                            Name = "Marley"
+                        },
+                        new
+                        {
+                            CatId = 4,
+                            Breed = "Short Hair",
+                            Name = "Michael"
+                        },
+                        new
+                        {
+                            CatId = 5,
+                            Breed = "Short Hair",
+                            Name = "Paprika"
+                        },
+                        new
+                        {
+                            CatId = 6,
+                            Breed = "Long Hair",
+                            Name = "Poe"
+                        });
                 });
 
             modelBuilder.Entity("AnimalShelter.Models.Dog", b =>
