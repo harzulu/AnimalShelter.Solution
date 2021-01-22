@@ -24,8 +24,7 @@ namespace AnimalShelter.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Dog>> Get()
         {
-            var query = _db.Dogs.ToList();
-            return query;
+            return _db.Dogs.ToList();
         }
 
         // GET api/values/5
