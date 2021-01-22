@@ -24,13 +24,142 @@ This is the code to run an Animal Shelter API that can give, change, delete, etc
 |------|----------------|
 |[Ben McFarland](https://www.linkedin.com/in/benjamin-mcf/)|[Harzulu](https://github.com/harzulu)|
 
-# 📗 User Stories
+# 📞 API Endpoints and Examples
 
-# 📊 SQL Schema
+<details>
+  <summary>Click to view</summary>
 
-<center>
-    <img style="width: 50% height: 50%" src="">
-</center>
+## 🐕 Dogs:
+
+**GET http://localhost:5001/api/dogs**
+
+Output:
+```
+[
+    {
+        "dogId": 1,
+        "name": "Uma",
+        "breed": "Pit Bull"
+    },
+    {
+        "dogId": 2,
+        "name": "Abner",
+        "breed": "Australian Cattledog"
+    },
+    {
+        "dogId": 3,
+        "name": "Jackson",
+        "breed": "Lab Mix"
+    }
+]
+```
+
+**GET http://localhost:5001/api/dogs/2**
+
+Output:
+```
+[
+    {
+        "dogId": 2,
+        "name": "Abner",
+        "breed": "Australian Cattledog"
+    }
+]
+```
+
+**POST http://localhost:5001/api/dogs**
+
+Body:
+```
+{
+  "dogId": 11,
+  "name": "Teddy",
+  "breed": "Greyhound"
+}
+```
+
+**PUT http://localhost:5001/api/dogs/2**
+
+Body:
+```
+{
+  "dogId": 2,
+  "name": "Roger",
+  "breed": "Bulldog"
+}
+```
+
+**DELETE http://localhost:5001/api/dogs/2**
+
+Output:
+```
+
+```
+
+## 🐈 Cats:
+
+**GET http://localhost:5001/api/cats**
+
+Output:
+```
+[
+  {
+        "catId": 1,
+        "name": "Baby Girl",
+        "breed": "Short Hair"
+    },
+    {
+        "catId": 2,
+        "name": "Inky",
+        "breed": "Short Hair"
+    },
+    {
+        "catId": 3,
+        "name": "Marley",
+        "breed": "Siamese"
+    }
+]
+```
+
+**GET http://localhost:5001/api/cats/3**
+
+```
+[
+  {
+    "catId": 3,
+    "name": "Marley",
+    "breed": "Siamese"
+  }
+]
+```
+
+**POST http://localhost:5001/api/cats**
+
+```
+{
+  "catId": 7,
+  "name": "Lilly"
+  "breed": "Long Hair"
+}
+```
+
+**PUT http://localhost:5001/api/cats/3**
+
+```
+{
+  "catId": 3,
+  "name": "Gus"
+  "breed": "Persian"
+}
+```
+
+**DELETE http://localhost:5001/api/cats/3**
+
+Output:
+```
+
+```
+</details>
 
 # ⚙️ Technologies Used
 
@@ -47,7 +176,6 @@ This is the code to run an Animal Shelter API that can give, change, delete, etc
 * <a href="https://getbootstrap.com/">Bootstrap</a>
 * <a href="https://docs.microsoft.com/en-us/ef/core/">EF Core</a>
 * <a href="https://www.mysql.com/">MySQL/My SQL Workbench</a>
-* <a href="https://ondras.zarovi.cz/sql/demo/">MySQL Designer</a>
 
 </details>
 
