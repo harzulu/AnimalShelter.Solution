@@ -3,18 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using AnimalShelter.Models;
 
 namespace AnimalShelter.Controllers
 {
-    [Route("api/[controller]")]
+
+    [Route("api/dogs")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AnimalShelterController : ControllerBase
     {
+        private AnimalShelterContext _db; 
+
+        public AnimalShelterController(AnimalShelterContext db)
+        {
+            _db = db;
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Dog>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var query = _db.Dogs.ToList();
+            return query;
         }
 
         // GET api/values/5
