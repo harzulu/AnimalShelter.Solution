@@ -11,11 +11,11 @@ namespace AnimalShelter.Controllers
 
     [Route("api/dogs")]
     [ApiController]
-    public class AnimalShelterController : ControllerBase
+    public class DogController : ControllerBase
     {
         private AnimalShelterContext _db; 
 
-        public AnimalShelterController(AnimalShelterContext db)
+        public DogController(AnimalShelterContext db)
         {
             _db = db;
         }
@@ -57,6 +57,58 @@ namespace AnimalShelter.Controllers
         {
             var dogToDelete = _db.Dogs.FirstOrDefault(entry => entry.DogId == id);
             _db.Dogs.Remove(dogToDelete);
+            _db.SaveChanges();
+        }
+    }
+
+    [Route("api/cats")]
+    [ApiController]
+    public class CatController : ControllerBase
+    {
+        private AnimalShelterContext _db; 
+
+        public CatController(AnimalShelterContext db)
+        {
+            _db = db;
+        }
+
+        // GET api/values
+        [HttpGet]
+        public ActionResult<IEnumerable<Cat>> Get()
+        {
+            return _db.Cats.ToList();
+        }
+
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public ActionResult<Cat> Get(int id)
+        {
+            return _db.Cats.FirstOrDefault(entry => entry.CatId == id);
+        }
+
+        // POST api/values
+        [HttpPost]
+        public void Post([FromBody] Cat cat)
+        {
+            _db.Add(cat);
+            _db.SaveChanges();
+        }
+
+        // PUT api/values/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] Cat cat)
+        {
+            cat.CatId = id;
+            _db.Entry(cat).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            var catToDelete = _db.Cats.FirstOrDefault(entry => entry.CatId == id);
+            _db.Cats.Remove(catToDelete);
             _db.SaveChanges();
         }
     }
