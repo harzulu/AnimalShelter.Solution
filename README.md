@@ -237,10 +237,10 @@ Once you have the file made, put in this code: <br>
 * Next, run the command: `dotnet ef database update`.
 * You should have your database created for this project.
 
-### Opening The Project
+### Calling the API
 * Finally, run the command `dotnet build` to get bin/ and obj/ folders downloaded, then `dotnet run` to run the application. The program should be connected to a localhost port, most likely 5000. Your terminal or command line should specify which port it is on.
-* Type into your web browser `http://localhost:[PORT_NUMBER]/` to view the project.
-
+* Once you have your project running, this is the base API path: `http://localhost:[PORT_NUMBER]/api/[ANIMAL]`.
+* View [here](#📞-api-endpoints-and-examples) to see what end points you can call.
 
 # ☎️ Support / Contact Details
 
