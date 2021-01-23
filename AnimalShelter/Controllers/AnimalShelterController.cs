@@ -59,12 +59,26 @@ namespace AnimalShelter.Controllers
             _db.Dogs.Remove(dogToDelete);
             _db.SaveChanges();
         }
+    }
 
-        //GET api/values/searchTerm
-        [HttpGet("{searchTerm}")]
-        public ActionResult<Dog> Get(string searchTerm)
+    [Route("api/dogs/random")]
+    [ApiController]
+    public class RandomDogController : ControllerBase
+    {
+        private AnimalShelterContext _db; 
+
+        public RandomDogController(AnimalShelterContext db)
         {
-            return _db.Dogs.FirstOrDefault(entry => entry.Name == searchTerm);
+            _db = db;
+        }
+
+        // GET api/values
+        [HttpGet]
+        public ActionResult<Dog> Get()
+        {
+            Random rnd = new Random();
+            int id = rnd.Next(1, _db.Dogs.Count());
+            return _db.Dogs.FirstOrDefault(entry => entry.DogId == id);
         }
     }
 
@@ -118,12 +132,26 @@ namespace AnimalShelter.Controllers
             _db.Cats.Remove(catToDelete);
             _db.SaveChanges();
         }
+    }
 
-        //GET api/values/searchTerm
-        [HttpGet("{searchTerm}")]
-        public ActionResult<Cat> Get(string searchTerm)
+    [Route("api/cats/random")]
+    [ApiController]
+    public class RandomCatController : ControllerBase
+    {
+        private AnimalShelterContext _db; 
+
+        public RandomCatController(AnimalShelterContext db)
         {
-            return _db.Cats.FirstOrDefault(entry => entry.Name == searchTerm);
+            _db = db;
+        }
+
+        // GET api/values
+        [HttpGet]
+        public ActionResult<Cat> Get()
+        {
+            Random rnd = new Random();
+            int id = rnd.Next(1, _db.Cats.Count());
+            return _db.Cats.FirstOrDefault(entry => entry.CatId == id);
         }
     }
 }
