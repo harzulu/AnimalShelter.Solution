@@ -67,6 +67,30 @@ namespace AnimalShelter.Migrations
                             CatId = 6,
                             Breed = "Long Hair",
                             Name = "Poe"
+                        },
+                        new
+                        {
+                            CatId = 7,
+                            Breed = "Short Hair",
+                            Name = "Brutus"
+                        },
+                        new
+                        {
+                            CatId = 8,
+                            Breed = "Short Hair",
+                            Name = "Ludo"
+                        },
+                        new
+                        {
+                            CatId = 9,
+                            Breed = "Long Hair",
+                            Name = "Nala"
+                        },
+                        new
+                        {
+                            CatId = 10,
+                            Breed = "Siamese",
+                            Name = "Turbo"
                         });
                 });
 

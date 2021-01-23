@@ -34,7 +34,11 @@ namespace AnimalShelter.Models
                     new Cat { CatId = 3, Name = "Marley", Breed = "Siamese"},
                     new Cat { CatId = 4, Name = "Michael", Breed = "Short Hair"},
                     new Cat { CatId = 5, Name = "Paprika", Breed = "Short Hair"},
-                    new Cat { CatId = 6, Name = "Poe", Breed = "Long Hair"}
+                    new Cat { CatId = 6, Name = "Poe", Breed = "Long Hair"},
+                    new Cat { CatId = 7, Name = "Brutus", Breed = "Short Hair"},
+                    new Cat { CatId = 8, Name = "Ludo", Breed = "Short Hair"},
+                    new Cat { CatId = 9, Name = "Nala", Breed = "Long Hair"},
+                    new Cat { CatId = 10, Name = "Turbo", Breed = "Siamese"}
                 );
         }
   }

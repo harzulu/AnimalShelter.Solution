@@ -41,11 +41,15 @@ namespace AnimalShelter.Migrations
                 values: new object[,]
                 {
                     { 1, "Short Hair", "Baby Girl" },
-                    { 2, "Short Hair", "Inky" },
-                    { 3, "Siamese", "Marley" },
+                    { 9, "Long Hair", "Nala" },
+                    { 8, "Short Hair", "Ludo" },
+                    { 7, "Short Hair", "Brutus" },
+                    { 6, "Long Hair", "Poe" },
+                    { 10, "Siamese", "Turbo" },
                     { 4, "Short Hair", "Michael" },
-                    { 5, "Short Hair", "Paprika" },
-                    { 6, "Long Hair", "Poe" }
+                    { 3, "Siamese", "Marley" },
+                    { 2, "Short Hair", "Inky" },
+                    { 5, "Short Hair", "Paprika" }
                 });
 
             migrationBuilder.InsertData(
@@ -53,6 +57,7 @@ namespace AnimalShelter.Migrations
                 columns: new[] { "DogId", "Breed", "Name" },
                 values: new object[,]
                 {
+                    { 9, "Pit Bull", "Chickie" },
                     { 1, "Pit Bull", "Uma" },
                     { 2, "Australian Cattledog", "Abner" },
                     { 3, "Lab Mix", "Jackson" },
@@ -61,7 +66,6 @@ namespace AnimalShelter.Migrations
                     { 6, "Retriever", "Brett" },
                     { 7, "Pit Bull", "Parker" },
                     { 8, "Chihuahua", "Miss Precious" },
-                    { 9, "Pit Bull", "Chickie" },
                     { 10, "German Sheppard", "Jasmine" }
                 });
         }
