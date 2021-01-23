@@ -176,6 +176,8 @@ Output:
 * <a href="https://getbootstrap.com/">Bootstrap</a>
 * <a href="https://docs.microsoft.com/en-us/ef/core/">EF Core</a>
 * <a href="https://www.mysql.com/">MySQL/My SQL Workbench</a>
+* <a href="postman.com">Postman</a>
+* <a href="https://swagger.io/tools/swagger-ui/">Swagger/Swagbuckle</a>
 
 </details>
 
@@ -241,6 +243,14 @@ Once you have the file made, put in this code: <br>
 * Finally, run the command `dotnet build` to get bin/ and obj/ folders downloaded, then `dotnet run` to run the application. The program should be connected to a localhost port, most likely 5000. Your terminal or command line should specify which port it is on.
 * Once you have your project running, this is the base API path: `http://localhost:[PORT_NUMBER]/api/[ANIMAL]`.
 * View [here](#📞-api-endpoints-and-examples) to see what end points you can call.
+
+# 😎 Using Swagger UI
+
+### The Swagger UI is already incorporated. To view the UI:
+
+* Run the command `dotnet run` to make your application live.
+* Find the port number your console gives you that the site is live on. This will usually be port 5000 or 5001.
+* In your web browser, go to this URL: `http://localhost:[PORT_NUMBER]/index.html`.
 
 # ☎️ Support / Contact Details
 
